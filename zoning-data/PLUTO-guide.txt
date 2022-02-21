@@ -1,0 +1,93 @@
+Borough	- NYC Borough.
+Block - Tax Block Number. Each block number is unique in each borough.
+Lot	- Tax Lot Number. Each lot number is unique within each borough. 
+CD - NYC Community District.
+CT2010/CT2000 - 2010 US Census Tract. (For 2011 data, it's 2000 US Census Tract!!!)
+CB2010/CB2000 - 2010 US Cenus Block. (For 2011 data, it's 2000 US Census Block!!!)
+SchoolDist - School district.
+Council - City council district. 
+ZipCode - Zipcode. 
+FireComp - Fire company identifier. 
+PolicePrct - Police precinct
+HealthCent - No idea what this means and the metadata doesn't say, but probably health center number
+HealthArea - Health area.
+Sanitboro - The borough of the sanitation district that serves the lot. 
+SanitDistr - The sanitation district that serves the lot. 
+SanitSub - The subsection number of the sanitation district that serves the lot
+Address	- Address.
+ZoneDist1 - Zone which takes up the most space in the lot. 
+ZoneDist2 - Zone which takes up the second-most space in the lot. Can be empty. 
+ZoneDist3 - Zone which takes up the third-most space in the lot. Can be empty. 	
+ZoneDist4 - Zone which takes up the fourth-most space in the lot. Can be empty. 		
+Overlay1 - Commercial overlay (zoning district mapped within residential zone) which takes up the most space in the lot. Can be empty. 		
+Overlay2 - Commercial overlay (zoning district mapped within residential zone) which takes up the second-most space in the lot. Can be empty. 		
+SPDist1 - Special overlay district which takes up the most space in the lot. Can be empty. 	
+SPDist2 - Special overlay district which takes up the second-most space in the lot. Can be empty. 		
+SPDist3 - Special overlay district which takes up the third-most space in the lot. Can be empty. 		
+LtdHeight - If the lot is in a limited height zone
+AllZoning1 (2014 data only) - Contains ZoneDist1/SPDist1 of that lot, seperated by forward slashes. If there is no SPDist1, it just contains ZoneDist1.
+AllZoning2 (2014 data only) - Contains ZoneDist2/SPDist2 of that lot, if applicable (follows same format is AllZoning1)
+SplitZone - Whether the lot is split into multiple zones (Y: Yes, N: No, Blank: Unknown)
+BldgClass - Building Class - what the structure/building is used for (very specific)
+LandUse	- Land use category - type of building use (more general) (single family, multi-family, etc.)
+Easements - Number of easements
+OwnerType - Type of woner
+OwnerName - Name of owner
+LotArea - Area of lot
+BldgArea - Area of building (not on the ground but across all floors)
+ComArea	- Area of building used for commerical purposes. 
+ResArea - Area of building used for residential purposes.
+OfficeArea - Area of building used for office purposes. 
+RetailArea - Area of building used for retail purposes. 
+GarageArea - Area of building used for garage purposes. 
+StrgeArea - Area of building used for storage purposes. 
+FactryArea - Area of building used for factory purposes. 
+OtherArea - Area of building used for other purposes. 
+AreaSource - Number denoting the source of the lot's total building area (BldgArea)
+NumBldgs - Number of buildings on the lot. 
+NumFloors - Number of floors (in total) on the lot. 
+UnitsRes - Number of residential units. 
+UnitsTotal - Number of total units (which are counted as having seperate uses)
+LotFront - The length of the lot facing it's street 
+LotDepth - The depth of the lot. 
+BldgFront - The building's length along the front
+BldgDepth - The building's perpendicular length
+Ext - Code denoting if there's a garage and/or extension.
+ProxCode - Code denoting the physical relationship of the lot to other buildings (detached, semi-detached, attached, not-avaliable)
+IrrLotCode - If the lot is irregularly shaped (Y/N)
+LotType - Type of lot (geographically)
+BsmtCode - A code which describes the nature of the basement
+AssessLand - Assessed value for the land on the lot. 
+AssessTot - Assessed total value of the lot. 
+ExemptTot - Value of exemptions for the lot. (whateveer the fuck that means)
+YearBuilt - When the building's construction finished. 
+YearAlter1 - When the buidling's first alteration began (if there was one.)
+YearAlter2 - When the building's second alternation began (if there was one.)
+HistDist - The name of the historical district the lot is in (otherwise blank.)
+Landmark - The type of landmark the lot is. (otherwise blank.)
+BuiltFAR - The total building floor area divided by the area of the tax lot. This is the 'real' FAR of the lot. 
+ResidFAR - The maximum allowable FAR for residential use (2.0 FAR on a 10000 sqft lot means max of 20000 sqft residential floor space, regardless of other land uses). This is the 'theoretical' FAR of the lot. 
+CommFAR - The maximum allowable FAR for commercial use (2.0 FAR on a 10000 sqft lot means max of 20000 sqft commercial floor space, regardless of other land uses). This is the 'theoretical' FAR of the lot. 
+FacilFAR - The maximum allowable FAR for facility use (2.0 FAR on a 10000 sqft lot means max of 20000 sqft facility floor space, regardless of other land uses). This is the 'theoretical' FAR of the lot. 
+BoroCode - Numerical code for the Borough where the lot is located. 
+BBL - concatenation of borough code, tax block, and tax lot. 
+CondoNo - the condiminium number of the complex. 
+Tract2010 - 2010 Census tract number. 
+XCoord - X coordinate of the lot expressed in the New York-Long Island State Plane coordinate system.
+YCoord - Y coordinate of the lot expressed in the New York-Long Island State Plane coordinate system.
+ZoneMap - The zoning map which the tax lot is in. 
+ZMCode - Code (Y/N) for if tax lot is on the border of two maps. 	
+Sanborn - Sanborn map company number used for the lot. 
+TaxMap - The Department of Finance paper tax map volume number associated with the tax block and lot. 
+EDesigNum - The (E) designation number assigned to the tax lot, which provides notice of the presence of an environmental requirement pertaining to potential hazardous materials contamination, high ambient noise levels or air emission concerns on a particular tax lot.	
+APPBBL - The originating BBL (borough, block and lot) from the apportionment prior to the merge, split or property’s conversion to a condominium. APPORTIONMENT BBL is only available for mergers, splits, and conversions since 1984. 
+APPDate	- The date of the apportionment.
+PLUTOMapID - Code which indicates whether lot is in PLUTO file, and whether it's in MapPLUTO clipped/not clipped. 
+FIRM07_FLA - ???? No idea. 	
+PFIRM15_FL - ???? Also no idea. 
+Version	- Version of the MapPLUTO file. 
+Shape_Leng - Shape length.
+Shape_Area - Shape area. 
+
+More info here: 
+https://www1.nyc.gov/assets/planning/download/pdf/data-maps/open-data/meta_mappluto.pdf?r=21v4
