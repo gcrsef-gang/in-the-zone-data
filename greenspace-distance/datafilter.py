@@ -67,12 +67,12 @@ def filter_data():
         pluto_data = pluto_data.loc[lot_data.index.intersection(pluto_data.index)]
         try:
             lot_data["land_use"+year] = pluto_data["LandUse"]
-            lot_data["x_coord"+year] = pluto_data["XCoord"]
-            lot_data["y_coord"+year] = pluto_data["YCoord"]
+            lot_data["x_coord"] = pluto_data["XCoord"]
+            lot_data["y_coord"] = pluto_data["YCoord"]
         except:
             lot_data["land_use"+year] = pluto_data["landuse"]
-            lot_data["x_coord"+year] = pluto_data["xcoord"]
-            lot_data["y_coord"+year] = pluto_data["ycoord"]
+            lot_data["x_coord"] = pluto_data["xcoord"]
+            lot_data["y_coord"] = pluto_data["ycoord"]
     lot_data.to_csv("all_lot_data.csv")
     lot_data[(lot_data["land_use"+"2011"] == "9") | (lot_data["land_use"+"2011"] == "09")].to_csv("lot_park_2011_data.csv") 
     lot_data[(lot_data["land_use"+"2016"] == "9") | (lot_data["land_use"+"2016"] == "09")].to_csv("lot_park_2016_data.csv") 
