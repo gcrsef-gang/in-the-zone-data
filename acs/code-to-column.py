@@ -1,6 +1,7 @@
 import pandas as pd
 
-for year in ["2011", "2014", "2016", "2019"]:
+# for year in ["2011", "2014", "2016", "2019"]:
+for year in ["2010", "2018"]:
     for type in ["demographic","economic","housing","social", "transportation"]:
         file = pd.read_csv("nyc-"+type+"-data-"+year+".csv", nrows=2)
         code_to_column_dict = {}

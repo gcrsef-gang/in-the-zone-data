@@ -1,5 +1,7 @@
 """
 Given processed data, creates metric of nearest park for all lots for 2011, 2016, and 2019. 
+
+usage: metric_constructor.py
 """
 import pandas as pd
 import numpy as np
@@ -8,7 +10,7 @@ import numpy as np
 lot_data = pd.read_csv("all_lot_data.csv")
 lot_data.set_index("BBL", inplace=True)
 
-for year in ["2011","2016","2019"]:
+for year in ["2010","2014","2018"]:
     print("Year: ", year)
     park_data = pd.read_csv("lot_park_"+year+"_data.csv")[["x_coord","y_coord"]]
     # park_data = park_data.head(30)

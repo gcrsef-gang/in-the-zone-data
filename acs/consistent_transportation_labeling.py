@@ -1,12 +1,13 @@
 import pandas as pd
 
-for year in ["2011","2014","2016"]:
+for year in ["2010","2011","2014","2016"]:
     df = pd.read_csv("nyc-transportation-data-"+year+".csv")
     labels = df.iloc[0]
     print(year)
-    new_labels = ['"id"', '"Geographic Area Name"']
+    new_labels = []
     for label in labels:
         if label in ["id", "Geographic Area Name"]:
+            new_labels.append('"'+label+'"')
             continue
         if label.find("Estimate") != -1:
             new_labels.append('"Estimate!!'+label[:label.find("Estimate")]+label[label.find("Estimate")+10:]+'"')
@@ -16,6 +17,6 @@ for year in ["2011","2014","2016"]:
             print(label)
             raise Exception("WHAT??")
     with open("new_labels"+year+".txt", "w") as f:
-        f.write(",".join(new_labels))
+        f.write(",".join(new_labels)+"\n")
 
 
