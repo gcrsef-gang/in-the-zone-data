@@ -8,7 +8,7 @@ with open("nyct2010.json", "r") as f:
 
 COUNTY_TO_CODE = {
     "Bronx": "BX",
-    "Brooklyn": "MK",
+    "Brooklyn": "BK",
     "Manhattan": "MN",
     "Queens": "QN",
     "Staten Island": "SI"

@@ -28,4 +28,5 @@ for year in ["2010","2014","2018"]:
 tract_df["d_2010_2014_distance_from_park"] = tract_df["2014_distance_from_park"]-tract_df["2010_distance_from_park"]
 tract_df["d_2014_2018_distance_from_park"] = tract_df["2018_distance_from_park"]-tract_df["2014_distance_from_park"]
 tract_df["d_2010_2018_distance_from_park"] = tract_df["2018_distance_from_park"]-tract_df["2010_distance_from_park"]
+tract_df.index.rename("ITZ_GEOID", inplace=True)
 tract_df.to_csv("tract_distance_from_park.csv")
