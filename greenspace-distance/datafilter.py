@@ -74,17 +74,19 @@ def filter_data():
 
         try:
             lot_data["land_use"+year] = pluto_data["LandUse"]
-            lot_data["x_coord"] = pluto_data["XCoord"]
-            lot_data["y_coord"] = pluto_data["YCoord"]
+            if year == "2010":
+                lot_data["x_coord"] = pluto_data["XCoord"]
+                lot_data["y_coord"] = pluto_data["YCoord"]
         except:
             lot_data["land_use"+year] = pluto_data["landuse"]
-            lot_data["x_coord"] = pluto_data["xcoord"]
-            lot_data["y_coord"] = pluto_data["ycoord"]
+            if year == "2010":
+                lot_data["x_coord"] = pluto_data["xcoord"]
+                lot_data["y_coord"] = pluto_data["ycoord"]
     # raise Exception('WAHT')
-    lot_data.to_csv("all_lot_data.csv")
-    lot_data[(lot_data["land_use"+"2010"] == "9") | (lot_data["land_use"+"2010"] == "09")].to_csv("lot_park_2010_data.csv") 
-    lot_data[(lot_data["land_use"+"2014"] == "9") | (lot_data["land_use"+"2014"] == "09")].to_csv("lot_park_2014_data.csv") 
-    lot_data[(lot_data["land_use"+"2018"] == "9") | (lot_data["land_use"+"2018"] == "09")].to_csv("lot_park_2018_data.csv") 
+    lot_data.to_csv("new_all_lot_data.csv")
+    lot_data[(lot_data["land_use"+"2010"] == "9") | (lot_data["land_use"+"2010"] == "09")].to_csv("new_lot_park_2010_data.csv") 
+    lot_data[(lot_data["land_use"+"2014"] == "9") | (lot_data["land_use"+"2014"] == "09")].to_csv("new_lot_park_2014_data.csv") 
+    lot_data[(lot_data["land_use"+"2018"] == "9") | (lot_data["land_use"+"2018"] == "09")].to_csv("new_lot_park_2018_data.csv") 
 
 if __name__ == "__main__":
     filter_data()

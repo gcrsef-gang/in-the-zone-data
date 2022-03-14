@@ -36,5 +36,6 @@ for year in ["2010","2014","2018"]:
         distance_data.append([index,min(dist)])
         i += 1
     distance_data = pd.DataFrame(distance_data)
+    distance_data.rename(columns={"0":"BBL","1":"park_distance"}, inplace=True)
     distance_data.to_csv("park_distance_"+year+"_data.csv")
         
